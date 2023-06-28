@@ -1,0 +1,13 @@
+.sidebar .nav-item a
+{
+    margin: 25px 0px;
+}
+table
+{
+    width: 67em;
+}
+table tr, table tr th, table tr td
+{
+    border: 1px solid black;
+    text-align: center;
+}

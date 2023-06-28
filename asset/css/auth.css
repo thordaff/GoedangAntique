@@ -1,0 +1,43 @@
+body
+{
+    background: brown!important;
+}
+
+.card
+{
+    background : white;
+
+    border-radius: 15px!important;
+    width: 50em;
+}
+.card-header
+{
+    background: none!important;
+}
+.card-body input
+{
+    border-radius: 5px;
+}
+.card-footer
+{
+    background: none!important;
+}
+.card-footer a
+{
+    color: black;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Button Auth */
+.button-auth button
+{
+    border: 1px solid black;
+}
+.button-auth button:hover
+{
+    color: white;
+    background: brown;
+}
+

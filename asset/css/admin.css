@@ -1,0 +1,39 @@
+section.dashboard .sidebar
+{
+    background: brown;
+    height: 100vh;
+}
+.sidebar ul li
+{
+    list-style: none;
+}
+.sidebar .navigation ul li
+{
+    margin: 20px 0px;
+}
+.sidebar ul li a 
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Laporan */
+
+.laporan .card
+{
+    width: 25%;
+}
+.laporan .card .button-detail a
+{
+    border-radius: 0px 0px 0px 0px;
+    color: white;
+    background: brown;
+}
+.laporan .card .button-detail a:hover
+{
+    border-radius: 0px 0px 5px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    color: black;
+    background: none;
+}

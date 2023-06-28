@@ -1,0 +1,30 @@
+a
+{
+    text-decoration: none!important;
+}
+/* Navbar */
+nav
+{
+    background: brown;
+}
+/* Homepage Content */
+section.content-1 h1
+{
+    font-weight: bold;
+    color: black;
+}
+
+.btn-produk a
+{
+    border: 1px solid black;
+}
+
+/* Footer Content */
+section.footer
+{
+    background: brown;
+}
+footer, footer a
+{
+    color: white;
+}
