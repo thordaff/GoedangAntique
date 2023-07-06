@@ -19,6 +19,45 @@ section.content-1 h1
     border: 1px solid black;
 }
 
+/* Detail Content */
+.description-section
+{
+    width: 35em;
+}
+.description-section .deksripsi
+{
+    height: 10em;
+}
+section.button
+{
+    margin-top: 10em;
+}
+.button a
+{
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 50px;
+    padding: 10px 0px;
+    background-color: brown;
+    color: white;
+}
+/* Img Section */
+
+.img-section .img-active
+{
+    width: 24.5em;
+    height: 24.5em;
+
+    background: grey;
+}
+.img-section .img-1, .img-2, .img-3, .img-4
+{
+    width: 5em;
+    height: 5em;
+
+    background: grey;
+}
+
 /* Footer Content */
 section.footer
 {

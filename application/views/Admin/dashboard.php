@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         <!-- Script CSS -->
-        <link rel="stylesheet" href="../../../asset/css/admin.css">
+        <link rel="stylesheet" href="<?= base_url('asset/css/admin.css');?>">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <!-- Script JS -->
         <script src="https://kit.fontawesome.com/25af777db1.js" crossorigin="anonymous"></script>
@@ -17,14 +17,14 @@
                 <div class="sidebar">
                     <div class="container">
                         <div class="logo mt-3">
-                            <img src="../../../asset/img-asset/NavbarImg.png" alt="Logo" width="175">
+                            <img src="<?= base_url('asset/img-asset/NavbarImg.png');?>" alt="Logo" width="175">
                         </div>
                         <div class="navigation mt-5">
                             <small><p class="text-light">Admin Panel</p></small>
                             <div class="nav">
                                 <ul>
                                     <li>
-                                        <a href="#">Dashboard</a>
+                                        <a class="active" href="#">Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="#">Total Toko</a>

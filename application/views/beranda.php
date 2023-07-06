@@ -48,13 +48,13 @@
                                 <div class="d-flex">
                                     <ul class="dropdown-menu" style="margin-left: 66em;">
                                         <?if ($show['role_id'] == 2) {?>
-                                            <form action="<?= base_url('Update/RolePembeli');?>" method="post"> 
+                                            <form action="Pembeli" method="post"> 
                                                 <input type="hidden" name="id_user" value="<?= $show['id_user']?>">
                                                 <li><button type="submit" class="dropdown-item" name="role_id">Beralih ke Pembeli</button></li>
                                             </form>
-                                            <li><a class="dropdown-item" href="#">Kelola Toko</a></li>
+                                            <li><a class="dropdown-item" href="Toko/Dashboard">Kelola Toko</a></li>
                                         <? } else { ?>
-                                            <form action="<?= base_url('Update/RolePenjual');?>" method="post"> 
+                                            <form action="Penjual" method="post"> 
                                                 <input type="hidden" name="id_user" value="<?= $show['id_user']?>">
                                                 <li><button type="submit" class="dropdown-item" name="role_id">Beralih ke Penjual</button></li>
                                             </form>
@@ -102,26 +102,28 @@
         </div>
         <section class="content-2">
             <div class="container">
-                <div class="row g-2">
-                    <div class="col-3">
-                        <a href="">
-                            <div class="card" style="width: 15rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nama Produk</h5>
-                                    <div class="row">
-                                        <div class="col">
-                                            <img src="" alt="" srcset="">
+                <div class="d-flex">
+                    <div class="d-flex flex-row gap-3">
+                        <?php foreach($produk as $p) :?>
+                            <a href="Detail/<?= $p['id_barang'];?>">
+                                <div class="card" style="width: 15rem;">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold"><?= $p['nama_barang']?></h5>
+                                        <div class="row mt-1 mb-5" style="">
+                                            <div class="col-2">
+                                                <img src="<?= base_url().'/Image/'.$p['nama_toko'].'/'.$p['foto_toko'] ?>" alt="" width="25">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="card-text"><?=$p ['nama_toko']?></p>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <p class="card-text">Toko</p>
-                                        </div>
+                                        <p class="text-disabled">Harga</p>
+                                        <p>Rp. <?=$p['harga_barang']?></p>
                                     </div>
-                                    <p class="text-disabled">Harga</p>
-                                    <p>Rp. Harga</p>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        <?php endforeach ;?>
                     </div>
                 </div>
                 <div class="d-flex btn-produk">

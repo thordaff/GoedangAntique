@@ -8,11 +8,13 @@ class Beranda extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Auth');
 		$this->load->model('Show_data');
+		$this->load->model('Produk_data');
 	}
 	public function index()
 	{
 		$data['user'] = $this->Auth->Session();
 		$data['show'] = $this->Show_data->Show();
+		$data['produk'] = $this->Produk_data->ShowData();
 		$this->load->view('beranda',$data);
 	}
 }

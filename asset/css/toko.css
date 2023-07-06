@@ -2,12 +2,26 @@
 {
     margin: 25px 0px;
 }
-table
+table.produk
 {
     width: 67em;
 }
-table tr, table tr th, table tr td
+table.produk tr, table.produk tr th, table.produk tr td
 {
     border: 1px solid black;
     text-align: center;
+}
+
+/* BTN */
+.btn-img
+{
+    background: grey;
+    width: 10em;
+    height: 10em;
+}
+.btn-img p
+{
+    width: 100%;
+    color: black;
+    text-decoration: none;
 }

@@ -68,3 +68,13 @@ $route['Laporan|laporan'] = 'Admin/Dashboard/Laporan';
 // Route Update
 $route['Penjual|penjual'] = 'Update/RolePenjual';
 $route['Pembeli|pembeli'] = 'Update/RolePembeli';
+
+// Route Toko
+$route['Toko/Dashboard|toko/dashboard'] = 'Toko/Dashboard';
+$route['Toko/Produk|toko/produk'] = 'Toko/Produk';
+
+// Route Detail
+$route['Detail/(:num)'] = 'Detail/index/$1';
+
+// Route Data Saving
+$route['Keranjang|keranjang'] = 'Keranjang';
