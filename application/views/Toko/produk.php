@@ -83,35 +83,36 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="<?= base_url('Tambah_data/produk');?>" method="post" enctype="multipart/form-data">
-                <div class="modal-body">
-                    <input type="hidden" name="toko_id" id="toko_id" value="<?= $produkAdd['toko_id']?>">
-                    <input type="hidden" name="toko_id" id="toko_id" value="<?= $produkAdd['nama_toko']?>">
-                    <div class="d-flex foto-barang">
-                        <input type="file" name="foto1" id="foto1">
-                        <input type="file" name="foto2" id="foto2">
-                    </div>
-                    <div class="d-flex flex-column nama-barang">
-                        <label for="nama_barang">Nama Produk</label>
-                        <input type="text" name="nama_barang" id="nama_barang">
-                    </div>
-                    <div class="d-flex flex-column deskripsi">
-                        <label for="deskripsi">Deskripsi</label>
-                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" style="resize: none;"></textarea>
-                    </div>
-                    <div class="d-flex flex-column harga-barang">
-                        <label for="harga_barang">Harga Produk</label>
-                        <input type="number" name="harga_barang" id="harga_barang">
-                    </div>
-                    <div class="d-flex flex-column jumlah-barang">
-                        <label for="jumlah_barang">Jumlah Produk</label>
-                        <input type="number" name="jumlah_barang" id="jumlah_barang">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="reset" class="btn btn-secondary">Reset</button>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
-                </div>
-            </form>
+    <div class="modal-body">
+        <input type="hidden" name="toko_id" id="toko_id" value="<?= isset($produkAdd['toko_id']) ? $produkAdd['toko_id'] : '' ?>">
+        <input type="hidden" name="nama_toko" id="nama_toko" value="<?= isset($produkAdd['nama_toko']) ? $produkAdd['nama_toko'] : '' ?>">
+        <div class="d-flex foto-barang">
+            <input type="file" name="foto1" id="foto1">
+            <input type="file" name="foto2" id="foto2">
+        </div>
+        <div class="d-flex flex-column nama-barang">
+            <label for="nama_barang">Nama Produk</label>
+            <input type="text" name="nama_barang" id="nama_barang">
+        </div>
+        <div class="d-flex flex-column deskripsi">
+            <label for="deskripsi">Deskripsi</label>
+            <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" style="resize: none;"></textarea>
+        </div>
+        <div class="d-flex flex-column harga-barang">
+            <label for="harga_barang">Harga Produk</label>
+            <input type="number" name="harga_barang" id="harga_barang">
+        </div>
+        <div class="d-flex flex-column jumlah-barang">
+            <label for="jumlah_barang">Jumlah Produk</label>
+            <input type="number" name="jumlah_barang" id="jumlah_barang">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+    </div>
+</form>
+
         </div>
     </div>
 </div>

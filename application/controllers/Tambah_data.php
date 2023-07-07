@@ -113,7 +113,7 @@ class Tambah_data extends CI_Controller {
                 'jumlah_barang' => $jumlah_barang,
             );
             $this->Produk_data->AddData($data);
-            redirect('toko/Produk');
+            redirect('Toko/Produk');
         }
     }
     

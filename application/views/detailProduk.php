@@ -102,7 +102,7 @@
                                             <input type="hidden" name="barang_id" id="barang_id" value="<?php echo $produk['id_barang']?>">
                                             <input type="hidden" name="toko_id" id="toko_id" value="<?php echo $produk['toko_id']?>">
                                             <div class="d-flex flex-column">
-                                                <button type="submit">Masukkan Keranjang</button>
+                                                <a type="submit"><button style="background: none;outline: none;">Masukkan Keranjang</button></a>
                                                 <a href="#">Beli Sekarang</a>
                                             </div>
                                         </form>
@@ -147,7 +147,7 @@
             </section>
         <!-- Section Komentar End -->
         <!-- Section Footer Start -->
-        <section class="footer mt-5">
+        <section class="footer mt-5 pt-5">
             <footer>
                 <div class="container">
                     <div class="row pt-4">

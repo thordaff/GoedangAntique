@@ -23,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto mt-2 gap-4">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Beranda</a>
+                            <a class="nav-link text-light" href="<?= base_url('Beranda');?>">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Produk</a>
+                            <a class="nav-link text-light" href="<?= base_url('Produk');?>">Produk</a>
                         </li>
                         <div class="nav-item">
-                            <a class="nav-link text-light" href="#">Tentang Kami</a>
+                            <a class="nav-link text-light" href="<?= base_url('Tentang');?>">Tentang Kami</a>
                         </div>
                     </ul>
                     <ul class="navbar-nav ms-auto mt-4">
@@ -126,21 +126,21 @@
                         <?php endforeach ;?>
                     </div>
                 </div>
-                <div class="d-flex btn-produk">
+                <div class="d-flex btn-produk mb-5 pb-5 mt-3 pt-3">
                     <a class="btn btn-md ms-auto" href="">Lihat Produk Lainnya</a>
                 </div>
             </div>
-            <div class="content-full mt-5 pt-5">
+            <div class="content-full mt-5 pt-5 text-light" style="background: brown;height:25em;">
                 <div class="container">
                     <div class="row">
                         <div class="col">
 
                         </div>
-                        <div class="col">
+                        <div class="col mt-5 pt-2">
                             <h3>GAntique Fair</h3>
                             <p>Mencari barang terbaik mu disini. Perawatan terhadap barang - barang sangat terjamin.</p>
                             <div class="button-content">
-                                <a class="btn" href="">Lokasi</a>
+                                <a class="btn fw-bold" href="" style="background: white;width: 10em;">Lokasi</a>
                             </div>
                         </div>
                     </div>
