@@ -23,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto mt-2 gap-4">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Beranda</a>
+                            <a class="nav-link text-light" href="<?= base_url('Beranda');?>">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Produk</a>
+                            <a class="nav-link text-light" href="<?= base_url('Produk');?>">Produk</a>
                         </li>
                         <div class="nav-item">
-                            <a class="nav-link text-light" href="#">Tentang Kami</a>
+                            <a class="nav-link text-light" href="<?= base_url('Tentang');?>">Tentang Kami</a>
                         </div>
                     </ul>
                     <ul class="navbar-nav ms-auto mt-4">
