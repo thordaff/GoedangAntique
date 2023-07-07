@@ -80,41 +80,67 @@
                     </h5>
                 </div>
                 <div class="content mt-3 pt-3">
-                    <div class="card p-3" style="width:100%;">
-                        <div class="row">
-                            <div class="col d-flex flex-column">
-                                <div class="d-flex flex-row">
+                    <?php foreach($barang as $b) :?>
+                        <div class="card p-3" style="width:100%;">
+                            <div class="row">
+                                <div class="col d-flex flex-column">
+                                    <div class="d-flex flex-row">
+                                        <img src="" alt="">
+                                        <p class="fw-bold"><?= $b['nama_barang']?></p>
+                                    </div>
                                     <img src="" alt="">
-                                    <p class="fw-bold">Nama Toko</p>
                                 </div>
-                                <img src="" alt="">
-                            </div>
-                            <div class="col">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente corporis error porro quidem in consequatur.</p>
-                            </div>
-                            <div class="col">
-                                <p>Harga</p>
-                            </div>
-                            <div class="col">
-                                <input type="number" name="" id="">
-                            </div>
-                            <div class="col">
-                                <p>Total harga</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="total-content mt-4 pt-3">
-                    <div class="card" style="background-color: rgb(216, 71, 71);">
-                        <div class="d-flex flex-row ms-auto">
-                            <div class="detail d-flex flex-row mt-2">
-                                <p>Total Produk 1 :</p>
-                                <p>Rp. 150000</p>
-                            </div>
-                            <a href="" class="btn">Checkout</a>
-                        </div>
-                    </div>
-                </div>
+                                <div class="col">
+                                    <p><?= $b['deskripsi']?></p>
+                                </div>
+                                <div class="col">
+                                    <p>Rp. <?= $b['harga_barang']?></p>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="quantity" id="quantity" oninput="calculateTotal()" placeholder="1">
+                                </div>
+                                <div class="col">
+                                    <p id="totalHarga">Total harga: Rp. <?= $b['harga_barang']?></p>
+                                </div>
+
+                                <script>
+                                function calculateTotal() {
+                                    var hargaBarang = <?= $b['harga_barang']?>;
+                                    var quantity = document.getElementById("quantity").value;
+
+                                    var totalHarga = hargaBarang * quantity;
+
+                                    document.getElementById("totalHarga").textContent = "Total harga: Rp. " + totalHarga;
+                                }
+                                </script>
+                                </div>
+                                </div>
+                                <?php endforeach ;?>
+                                </div>
+                                <div class="total-content mt-4 pt-3">
+                                    <div class="card" style="background-color: rgb(216, 71, 71);">
+                                        <div class="d-flex flex-row ms-auto">
+                                            <div class="detail d-flex flex-row mt-2 me-4 text-light fw-bold">
+                                                <p>Total Produk 1 : </p>
+                                                <p id="totalProduk1">Rp. <?= $b['harga_barang']?></p>
+                                            </div>
+                                            <a href="" class="btn fw-bold pt-2" style="background: white;">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <script>
+                                function calculateTotal() {
+                                    var hargaBarang = <?= $b['harga_barang']?>;
+                                    var quantity = document.getElementById("quantity").value;
+
+                                    var totalHarga = hargaBarang * quantity;
+
+                                    document.getElementById("totalHarga").textContent = "Total harga: Rp. " + totalHarga;
+                                    document.getElementById("totalProduk1").textContent = "Rp. " + totalHarga;
+                                }
+                                </script>
             </div>
         </section>
         <!-- Section Content End -->

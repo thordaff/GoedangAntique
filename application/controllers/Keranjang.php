@@ -15,29 +15,24 @@ class Keranjang extends CI_Controller {
 	{
 		$data['user'] = $this->Auth->Session();
 		$data['show'] = $this->Show_data->Show();
-		$data['produk'] = $this->Produk_data->ShowData();
+		$data['barang'] = $this->Keranjang_data->ShowDataKeranjang();
 		$this->load->view('keranjang',$data);
 	}
 
 	// Tambah Keranjang
 	public function AddKeranjang()
 	{
-		$id_user = $this->input->post('id_user');
-		$id_barang = $this->input->post('id_barang');
-		$id_toko = $this->input->post('id_toko');
+		$user_id = $this->input->post('user_id');
+		$barang_id = $this->input->post('barang_id');
+		$toko_id = $this->input->post('toko_id');
 	
 		$data = array(
-			'user_id' => $id_user,
-			'barang_id' => $id_barang,
-			'toko_id' => $id_toko
+			'user_id' => $user_id,
+			'barang_id' => $barang_id,
+			'toko_id' => $toko_id,
 		);
-	
-		try {
-			$this->Keranjang_data->AddKeranjang($data);
-			redirect('Keranjang');
-		} catch (Exception $e) {
-			echo 'Error: ' . $e->getMessage();
-		}
+		$this->Keranjang_data->AddKeranjang($data);
+		redirect('Keranjang');
 	}	
 	
 }

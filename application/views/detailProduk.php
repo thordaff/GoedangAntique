@@ -98,9 +98,9 @@
                                     </section>
                                     <section class="button">
                                         <form action="<?= base_url('Keranjang/AddKeranjang');?>" method="post">
-                                            <input type="hidden" name="id_user" value="<?php echo $user['id_user']?>">
-                                            <input type="hidden" name="id_barang" value="<?php echo $produk['id_barang']?>">
-                                            <input type="hidden" name="id_toko" value="<?php echo $produk['toko_id']?>">
+                                            <input type="hidden" name="user_id" id="user_id" value="<?php echo $user['id_user']?>">
+                                            <input type="hidden" name="barang_id" id="barang_id" value="<?php echo $produk['id_barang']?>">
+                                            <input type="hidden" name="toko_id" id="toko_id" value="<?php echo $produk['toko_id']?>">
                                             <div class="d-flex flex-column">
                                                 <button type="submit">Masukkan Keranjang</button>
                                                 <a href="#">Beli Sekarang</a>
