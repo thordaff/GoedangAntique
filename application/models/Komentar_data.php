@@ -6,6 +6,7 @@ class Komentar_data extends CI_Model {
     // Tampil Data
     function ShowKomentar($id_barang)
     {
+        $this->db->join('user', 'user.id_user = komentar.user_id');
         $this->db->where('barang_id', $id_barang);
         return $this->db->get('komentar')->result_array();
     }

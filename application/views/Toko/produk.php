@@ -82,9 +82,10 @@
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="<?= base_url('Tambah_data/produk');?>" method="post">
+            <form action="<?= base_url('Tambah_data/produk');?>" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <input type="hidden" name="toko_id" id="toko_id" value="<?= $produkAdd['toko_id']?>">
+                    <input type="hidden" name="toko_id" id="toko_id" value="<?= $produkAdd['nama_toko']?>">
                     <div class="d-flex foto-barang">
                         <input type="file" name="foto1" id="foto1">
                         <input type="file" name="foto2" id="foto2">

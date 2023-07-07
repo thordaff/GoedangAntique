@@ -97,10 +97,15 @@
                                         <p><?= $produk['harga_barang']?></p>
                                     </section>
                                     <section class="button">
-                                        <div class="d-flex flex-column">
-                                            <a href="#">Masukkan Keranjang</a>
-                                            <a href="#">Beli Sekarang</a>
-                                        </div>
+                                        <form action="<?= base_url('Keranjang/AddKeranjang');?>" method="post">
+                                            <input type="hidden" name="id_user" value="<?php echo $user['id_user']?>">
+                                            <input type="hidden" name="id_barang" value="<?php echo $produk['id_barang']?>">
+                                            <input type="hidden" name="id_toko" value="<?php echo $produk['toko_id']?>">
+                                            <div class="d-flex flex-column">
+                                                <button type="submit">Masukkan Keranjang</button>
+                                                <a href="#">Beli Sekarang</a>
+                                            </div>
+                                        </form>
                                     </section>
                                 </div>
                             </div>
@@ -118,10 +123,10 @@
                         <div class="body-komentar mt-3">
                             <?php foreach ($komentar as $k) : ?>
                                 <h6 class="fw-bold">
-                                    <?php if ($user['nama'] == null) : ?>
-                                        <?= $user['username'] ?>
+                                    <?php if ($k['nama'] == null) : ?>
+                                        <?= $k['username'] ?>
                                     <?php else : ?>
-                                        <?= $user['nama'] ?>
+                                        <?= $k['nama'] ?>
                                     <?php endif; ?>
                                 </h6>
                                 <p><?= $k['isi_komentar'] ?></p>
